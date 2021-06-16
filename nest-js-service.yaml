@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: nest-js-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - port: 3000
       nodePort: 30069
