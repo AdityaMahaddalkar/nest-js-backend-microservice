@@ -3,8 +3,12 @@ kind: Service
 metadata:
   name: nest-js-service
 spec:
+  type: LoadBalancer
   ports:
     - port: 3000
+      nodePort: 80
+      targetPort: 80
+      protocol: TCP
   selector:
     app: nest-js
     function: backend
